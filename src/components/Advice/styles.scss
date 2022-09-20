@@ -1,0 +1,70 @@
+@import "../../global/colors";
+
+.advice {
+  &_outer_container {
+    min-height: 100vh;
+    background-color: $DarkBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $DarkGrayishBlue;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    border-radius: 8px;
+    gap: 1.4rem;
+    position: relative;
+    width: 60%;
+    margin: 0;
+
+    @media screen and (max-width: 375px) {
+        width: 100%;
+      margin: 0 1rem;
+    }
+
+    h3 {
+      font-size: 12px;
+      color: $NeonGreen;
+      letter-spacing: 0.2rem;
+    }
+
+    article {
+      font-size: 28px;
+      text-align: center;
+      color: $LightCyan;
+      font-weight: 800;
+    }
+
+    button {
+      position: absolute;
+      background-color: $NeonGreen;
+      border: none;
+      padding: 1rem;
+      border-radius: 50%;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: box-shadow 0.2s ease-in-out;
+
+      &:hover {
+        box-shadow: 0px 0px 48px 27px rgba($NeonGreen, 0.2);
+      }
+    }
+  }
+
+  &__divider{
+    width: 84%;
+    background-image: url(../../assets/images/pattern-divider-desktop.svg);
+    height: 16px;
+  }
+}
